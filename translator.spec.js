@@ -22,6 +22,48 @@ describe('Testing translateToMorse', () => {
     expect(result).toBe(".-. --- -...")
   })
 
+  it("should translate 3 to ...--", ()=> {
+    // Arrange
+      let string;
+    // Act
+      string= 3;
+      let result= translateToMorse(string)
+    // Assert
+    expect(result).toBe("...--")
+  })
+
+  it("should translate 34 to ...-- ....-", ()=> {
+    // Arrange
+      let string;
+    // Act
+      string= 34;
+      let result= translateToMorse(string)
+    // Assert
+    expect(result).toBe("...-- ....-")
+  })
+
+  it("should translate two words to - .-- --- / .-- --- .-. -.. ...", ()=> {
+    // Arrange
+      let string;
+    // Act
+      string= "two words";
+      let result= translateToMorse(string)
+    // Assert
+    expect(result).toBe("- .-- --- / .-- --- .-. -.. ...")
+  })
+
+  it("should translate ! . ? , - to -.-.-- / .-.-.- / ..--.. / --..-- / -....-", ()=> {
+    // Arrange
+      let string;
+    // Act
+      string= "! . ? , -";
+      let result= translateToMorse(string)
+    // Assert
+    expect(result).toBe("-.-.-- / .-.-.- / ..--.. / --..-- / -....-")
+  })
+
+
+
  })
 
  // recieve letters and translate those letters into morse code
