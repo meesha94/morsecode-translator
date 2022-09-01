@@ -62,6 +62,15 @@ describe('Testing translateToMorse', () => {
     expect(result).toBe("-.-.-- / .-.-.- / ..--.. / --..-- / -....-")
   })
 
+  it("should translate name@email.com to -. .- -- . .--.-. . -- .- .. .-.. .-.-.- -.-. --- --", ()=> {
+    // Arrange
+      let string;
+    // Act
+      string= "name@email.com";
+      let result= translateToMorse(string)
+    // Assert
+    expect(result).toBe("-. .- -- . .--.-. . -- .- .. .-.. .-.-.- -.-. --- --")
+  })
 
 
  })
