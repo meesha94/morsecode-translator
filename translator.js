@@ -1,11 +1,11 @@
 // an object of key:value pairs for each character
 //input box for user to type english words
 //output box for morse code equivalent to be outputted
-//function that takes a string that uses object key and returns object value when user cliks button
+//function that takes a string that uses object key and returns object value when user clicks button
 //
 
-//const englishInput = document.querySelector(".english")
-//const morseCodeOutput = document.querySelector(".morse-code")
+const englishInput = document.querySelector(".english")
+const morseCodeOutput = document.querySelector(".morse-code")
 
 const morseCode = {
   A: ".-",
@@ -52,7 +52,7 @@ const morseCode = {
   "@": ".--.-.",
 };
 
-const translateToMorse = (stringInput) => {
+const translateToMorse = () => {
   // take user input into function
   // input into uppercase
   //break up input into indiviual item's
@@ -61,19 +61,18 @@ const translateToMorse = (stringInput) => {
   // push each value into a new array
   // rejoin morse code
   //return as output
-  const capitaliseInput = stringInput.toString().toUpperCase();
-  const stringInputArray = capitaliseInput.split("");
+  let stringInput = englishInput.value
+  let capitaliseInput = stringInput.toUpperCase();
+  let stringInputArray = capitaliseInput.split("");
 
   for (let i = 0; i < stringInputArray.length; i++) {
     stringInputArray[i] = morseCode[stringInputArray[i]];
-    console.log(stringInputArray[i] );
-
-    //console.log(Object.values(morseCode))
-    //console.log(stringInputArray.get(morseCode))
+    //console.log(stringInputArray[i]);
   }
-
-  //console.log(Object.values(morseCode))
+  stringInputArray = stringInputArray.join(" ")
+  morseCodeOutput.innerHTML = stringInputArray
+  console.log(morseCodeOutput.innerHTML = stringInputArray);
 };
-translateToMorse("hello");
+//translateToMorse();
 
-//englishInput.addEventListener("input",translateToMorse )
+englishInput.addEventListener("input",translateToMorse )
