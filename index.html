@@ -7,10 +7,11 @@
     
 </head>
 <body>
-    <input type="text" class="english" name="english">
-    
-    
-    <input type="text" class="morse-code" name="morse-code">
+    <form id="translator">
+        <textarea type="text" id="input-english" class="english"></textarea>
+        <button type="button" id="translate" onclick="translateEnglish()">Translate English to Morse </button>
+        <div type="text" id="output-morse" class="morse-code"></div>
+    </form>
     
 
 

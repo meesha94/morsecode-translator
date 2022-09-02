@@ -70,7 +70,7 @@ const translateToMorse = () => {
     //console.log(stringInputArray[i]);
   }
   stringInputArray = stringInputArray.join(" ")
-  morseCodeOutput.innerHTML = stringInputArray
+ morseCodeOutput.innerHTML = stringInputArray
   console.log(morseCodeOutput.innerHTML = stringInputArray);
 };
 //translateToMorse();
