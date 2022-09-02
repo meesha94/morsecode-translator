@@ -1,7 +1,58 @@
-//morse code alphabet is an array of objects with key as each letter in the english alaphabet 
-//test each letter returns morse code 
+// an object of key:value pairs for each character 
+//input box for user to type english words
+//output box for morse code quivalent to be outputted
 
+const morseCode = {
+    "A": ".-",
+    "B": "-...",
+    "C": "-.-.",
+    "D": "-..",
+    "E": ".",
+    "F": "..-.",
+    "G": "--.",
+    "H": "....",
+    "I": "..",
+    "J": ".---",
+    "K": "-.-",
+    "L": ".-..",
+    "M": "--",
+    "N": "-.",
+    "O": "---",
+    "P": ".--.",
+    "Q": "--.-",
+    "R": ".-.",
+    "S": "...",
+    "T": "-",
+    "U": "..-",
+   "W": ".--",
+   "X": "-..-",
+   "Y": "-.--",
+   "Z": "--..",
+   0:"-----",
+   1:".----",
+   2:"..---",
+   3:"...--",
+   4:"....-",
+   5:".....",
+   6:"-....",
+   7:"--...",
+   8:"---..",
+   9:"----.",
+   " ":" / ",
+   ".":".-.-.-",
+   ",":"--..--",
+   "?":"..--..",
+   "!":"-.-.--",
+   "-":"-....-",
+   "@":".--.-.",
+
+}
 
 export const translateToMorse = () => {
+
+
+
+
+
 
 }
