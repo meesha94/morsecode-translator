@@ -4,8 +4,10 @@
 //function that takes a string that uses object key and returns object value when user clicks button
 //
 
-const englishInput = document.querySelector(".english")
-const morseCodeOutput = document.querySelector(".morse-code")
+const englishInput = document.querySelector("#input-english")
+const morseCodeOutput = document.querySelector("#output-morse")
+
+
 
 const morseCode = {
   A: ".-",
@@ -71,7 +73,7 @@ const translateToMorse = () => {
   }
   stringInputArray = stringInputArray.join(" ")
  morseCodeOutput.innerHTML = stringInputArray
-  console.log(morseCodeOutput.innerHTML = stringInputArray);
+  //console.log(morseCodeOutput.innerHTML = stringInputArray);
 };
 //translateToMorse();
 
