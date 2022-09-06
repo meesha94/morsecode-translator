@@ -52,14 +52,14 @@ describe('Testing translateToMorse', () => {
     expect(result).toBe("- .-- --- / .-- --- .-. -.. ...")
   })
 
-  it("should translate ! . ? , - to -.-.-- / .-.-.- / ..--.. / --..-- / -....-", ()=> {
+  it("should translate ! . ? , - to -.-.--/.-.-.-/..--../--..--/-....-", ()=> {
     // Arrange
       let string;
     // Act
       string= "! . ? , -";
       let result= translateToMorse(string)
     // Assert
-    expect(result).toBe("-.-.-- / .-.-.- / ..--.. / --..-- / -....-")
+    expect(result).toBe("-.-.--  /  .-.-.-  /  ..--..  /  --..--  /  -....-")
   })
 
   it("should translate name@email.com to -. .- -- . .--.-. . -- .- .. .-.. .-.-.- -.-. --- --", ()=> {

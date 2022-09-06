@@ -3,58 +3,11 @@
 //output box for morse code equivalent to be outputted
 //function that takes a string that uses object key and returns object value when user clicks button
 //
-
-const englishInput = document.querySelector("#input-english")
-const morseCodeOutput = document.querySelector("#output-morse")
+import { morseCode } from "./alphabet.js";
 
 
 
-const morseCode = {
-  A: ".-",
-  B: "-...",
-  C: "-.-.",
-  D: "-..",
-  E: ".",
-  F: "..-.",
-  G: "--.",
-  H: "....",
-  I: "..",
-  J: ".---",
-  K: "-.-",
-  L: ".-..",
-  M: "--",
-  N: "-.",
-  O: "---",
-  P: ".--.",
-  Q: "--.-",
-  R: ".-.",
-  S: "...",
-  T: "-",
-  U: "..-",
-  W: ".--",
-  X: "-..-",
-  Y: "-.--",
-  Z: "--..",
-  0: "-----",
-  1: ".----",
-  2: "..---",
-  3: "...--",
-  4: "....-",
-  5: ".....",
-  6: "-....",
-  7: "--...",
-  8: "---..",
-  9: "----.",
-  " ": " / ",
-  ".": ".-.-.-",
-  ",": "--..--",
-  "?": "..--..",
-  "!": "-.-.--",
-  "-": "-....-",
-  "@": ".--.-.",
-};
-
-const translateToMorse = () => {
+export const translateToMorse = (string) => {
   // take user input into function
   // input into uppercase
   //break up input into indiviual item's
@@ -63,18 +16,20 @@ const translateToMorse = () => {
   // push each value into a new array
   // rejoin morse code
   //return as output
-  let stringInput = englishInput.value
-  let capitaliseInput = stringInput.toUpperCase();
-  let stringInputArray = capitaliseInput.split("");
+  //let stringInput = englishInput.value
+  let input = string.toUpperCase().split("");
+  
 
-  for (let i = 0; i < stringInputArray.length; i++) {
-    stringInputArray[i] = morseCode[stringInputArray[i]];
+  for (let i = 0; i < input.length; i++) {
+    input[i] = morseCode[input[i]];
     //console.log(stringInputArray[i]);
   }
-  stringInputArray = stringInputArray.join(" ")
- morseCodeOutput.innerHTML = stringInputArray
+  return input = input.join(" ")
+ 
   //console.log(morseCodeOutput.innerHTML = stringInputArray);
 };
 //translateToMorse();
 
-englishInput.addEventListener("input",translateToMorse )
+
+
+console.log(translateToMorse("hello"));
